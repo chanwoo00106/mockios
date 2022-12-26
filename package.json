@@ -1,7 +1,7 @@
 {
   "name": "axios-test",
   "version": "1.0.0",
-  "description": "A library to remove the dependency on Axios.",
+  "description": "A library that helps run-time testing by putting fake data instead of Axios.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
