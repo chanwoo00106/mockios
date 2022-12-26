@@ -2,7 +2,6 @@
   "name": "mockios",
   "version": "1.0.0",
   "description": "A library that helps run-time testing by putting fake data instead of Axios.",
-  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/chanwoo00106/axios-test.git"
