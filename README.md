@@ -1,4 +1,4 @@
-# axios-test
+# mockios
 
 A library that helps run-time testing by putting fake data instead of Axios.
 
@@ -20,7 +20,8 @@ const mockData: MockDataType = {
   delete: {},
 }
 
-const query = process.env.NODE_ENV === 'development' ? mockAxios(mockData) : axios
+const query =
+  process.env.NODE_ENV === 'development' ? mockAxios(mockData) : axios
 
 console.log(query.get('/hello')) // { ok: true, message: 'hello world' }
 ```
