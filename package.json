@@ -5,14 +5,14 @@
   "description": "A library that helps run-time testing by putting fake data instead of Axios.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chanwoo00106/axios-test.git"
+    "url": "https://github.com/chanwoo00106/mockios.git"
   },
   "author": "chanwoo00106 <byun00106@naver.com> (https://github.com/chanwoo00106)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chanwoo00106/axios-test/issues"
+    "url": "https://github.com/chanwoo00106/mockios/issues"
   },
-  "homepage": "https://github.com/chanwoo00106/axios-test",
+  "homepage": "https://github.com/chanwoo00106/mockios",
   "scripts": {
     "build": "tsc",
     "test": "jest"
