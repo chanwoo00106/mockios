@@ -14,7 +14,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MockAxios = void 0;
-var MockAxios_1 = require("./MockAxios");
-Object.defineProperty(exports, "MockAxios", { enumerable: true, get: function () { return MockAxios_1.default; } });
+var Mockios_1 = require("./Mockios");
 __exportStar(require("./type"), exports);
+exports.default = Mockios_1.default;

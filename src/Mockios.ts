@@ -1,6 +1,6 @@
-import { MockAxiosType } from './type'
+import { MockiosType } from './type'
 
-const mockAxios: MockAxiosType = (mockData) => ({
+const mockios: MockiosType = (mockData) => ({
   get: (url) => mockData.get[url],
   post: (url) => mockData.post[url],
   patch: (url) => mockData.patch[url],
@@ -10,4 +10,4 @@ const mockAxios: MockAxiosType = (mockData) => ({
   option: (url) => mockData.option[url],
 })
 
-export default mockAxios
+export default mockios
