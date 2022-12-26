@@ -1,0 +1,5 @@
+export { default as MethodsType } from './MethodsType'
+export { default as MockAxiosType } from './MockAxiosType'
+export { default as MockDataType } from './MockDataType'
+export { default as QueryType } from './QueryType'
+export { default as ResponseUrlBodyType } from './ResponseUrlBodyType'

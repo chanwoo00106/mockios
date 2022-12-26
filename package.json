@@ -1,0 +1,22 @@
+{
+  "name": "axios-test",
+  "version": "1.0.0",
+  "description": "A library to remove the dependency on Axios.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chanwoo00106/axios-test.git"
+  },
+  "author": "chanwoo00106 <byun00106@naver.com> (https://github.com/chanwoo00106)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chanwoo00106/axios-test/issues"
+  },
+  "homepage": "https://github.com/chanwoo00106/axios-test",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
