@@ -4,12 +4,6 @@ const mockData: MockDataType = {
   get: {
     '/hello': { ok: true, message: 'hello world' },
   },
-  post: {},
-  patch: {},
-  head: {},
-  option: {},
-  put: {},
-  delete: {},
 }
 
 describe('mockios test', () => {
@@ -18,5 +12,8 @@ describe('mockios test', () => {
       ok: true,
       message: 'hello world',
     })
+  })
+  it('post method should return undefined', () => {
+    expect(mockios(mockData).post('/')).toBe(undefined)
   })
 })

@@ -1,3 +1,3 @@
-type QueryType = (url: string, ...args: any[]) => any;
+type QueryType = (url: string, ...args: any[]) => any
 
-export default QueryType;
+export default QueryType
