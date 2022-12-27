@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios'
+import { AxiosError, AxiosResponse } from 'axios'
 import { MockDataType, Methods } from './type'
 
 const findResponse = async (
@@ -8,6 +8,8 @@ const findResponse = async (
 ): Promise<AxiosResponse<any, any>> => {
   const body = mockData?.[method]?.[url][0]
   const config = mockData?.[method]?.[url][1]
+
+  if (!body) throw new AxiosError('Not Found Error', '404', config)
 
   return {
     status: body ? 200 : 404,

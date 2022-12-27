@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import mockios, { MockDataType } from '../src'
 
 const mockData: MockDataType = {
@@ -26,10 +26,15 @@ describe('mockios test', () => {
     expect(config.baseURL).toBe('http://localhost:3000')
   })
 
-  it('post method should return undefined', async () => {
-    const { data } = await mockios(mockData).post('/')
-
-    expect(data).toBe(undefined)
+  it('post method should throw axios error', async () => {
+    try {
+      await mockios(mockData).post('/')
+    } catch (e: unknown | AxiosError) {
+      if (!axios.isAxiosError(e)) throw new Error('is not axios error')
+      expect(e).toBeInstanceOf(AxiosError)
+      return
+    }
+    throw new Error('not throw axios error')
   })
 
   it('should not occurs type error', async () => {
