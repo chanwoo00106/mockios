@@ -8,7 +8,7 @@ const mockios: MockiosType = (mockData) => ({
   put: (url) => findResponse('put', url, mockData),
   delete: (url) => findResponse('delete', url, mockData),
   head: (url) => findResponse('head', url, mockData),
-  option: (url) => findResponse('option', url, mockData),
+  options: (url) => findResponse('option', url, mockData),
 })
 
 export default mockios

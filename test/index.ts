@@ -1,3 +1,4 @@
+import axios from 'axios'
 import mockios, { MockDataType } from '../src'
 
 const mockData: MockDataType = {
@@ -19,5 +20,15 @@ describe('mockios test', () => {
     const { data } = await mockios(mockData).post('/')
 
     expect(data).toBe(undefined)
+  })
+
+  it('should not occurs type error', async () => {
+    const query = mockios(mockData) ?? axios
+    const { data } = await query.get('/hello')
+
+    expect(data).toEqual({
+      ok: true,
+      message: 'hello world',
+    })
   })
 })

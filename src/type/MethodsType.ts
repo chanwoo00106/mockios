@@ -1,13 +1,15 @@
+import QueryNotBodyType from './QueryNotBodyType'
 import QueryType from './QueryType'
 
 interface MethodsType {
-  get: QueryType
-  head: QueryType
-  option: QueryType
+  get: QueryNotBodyType
+  head: QueryNotBodyType
+  options: QueryNotBodyType
   post: QueryType
   put: QueryType
   patch: QueryType
-  delete: QueryType
+  delete: QueryNotBodyType
+  [key: string]: any
 }
 
 export default MethodsType
