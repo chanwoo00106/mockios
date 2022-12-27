@@ -3,7 +3,10 @@ import mockios, { MockDataType } from '../src'
 
 const mockData: MockDataType = {
   get: {
-    '/hello': { ok: true, message: 'hello world' },
+    '/hello': [
+      { ok: true, message: 'hello world' },
+      { baseURL: 'http://localhost:3000' },
+    ],
   },
 }
 
@@ -16,6 +19,13 @@ describe('mockios test', () => {
       message: 'hello world',
     })
   })
+
+  it('baseURL should return localhost:3000', async () => {
+    const { config } = await mockios(mockData).get('/hello')
+
+    expect(config.baseURL).toBe('http://localhost:3000')
+  })
+
   it('post method should return undefined', async () => {
     const { data } = await mockios(mockData).post('/')
 
