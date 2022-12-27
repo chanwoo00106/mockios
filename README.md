@@ -6,22 +6,21 @@ A library that helps run-time testing by putting fake data instead of Axios.
 
 ```typescript
 import axios from 'axios'
-import mockAxios, { MockDataType } from 'axios-test'
+import mockios, { MockDataType } from 'mockios'
 
 const mockData: MockDataType = {
-  get: {
-    '/hello': { ok: true, message: 'hello world' },
-  },
-  post: {},
-  patch: {},
-  put: {},
-  head: {},
-  option: {},
-  delete: {},
+  get: { // method
+    '/hello': [ // url
+      { ok: true, message: 'hello world' }, // response body
+      { baseURL: 'http://localhost:3000' }, // response config
+    ],
+  }
 }
 
 const query =
-  process.env.NODE_ENV === 'development' ? mockAxios(mockData) : axios
+  process.env.NODE_ENV === 'development' ? mockios(mockData) : axios
 
-console.log(query.get('/hello')) // { ok: true, message: 'hello world' }
+query.get('/hello').then(({ data }) => {
+  console.log(data) // { ok: true, message: 'hello world' }
+})
 ```
