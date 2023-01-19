@@ -1,0 +1,10 @@
+src/**
+test/**
+example/**
+.gitignore
+babel.config.json
+jest.config.js
+prettier.config.js
+rollup.config
+tsconfig.json
+yarn.lock
