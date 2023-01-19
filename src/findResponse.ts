@@ -1,4 +1,4 @@
-import { AxiosError, AxiosResponse } from 'axios'
+import { AxiosError,  AxiosHeaders,  AxiosResponse } from 'axios'
 import { MockDataType, Methods } from './type'
 
 const findResponse = async (
@@ -9,7 +9,10 @@ const findResponse = async (
   const body = mockData?.[method]?.[url][0]
   const config = mockData?.[method]?.[url][1]
 
-  if (!body) throw new AxiosError('Not Found Error', '404', config)
+  if (!body || !config) throw new AxiosError('Not Found Error', '404')
+
+  const headers = new AxiosHeaders()
+
 
   return {
     status: body ? 200 : 404,
@@ -17,8 +20,11 @@ const findResponse = async (
     data: body,
     config: {
       ...config,
-      method,
+      headers: {
+        ...headers as any,
+      },
       url,
+      method
     },
     headers: {},
   }

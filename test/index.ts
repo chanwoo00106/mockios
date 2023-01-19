@@ -10,6 +10,7 @@ const mockData: MockDataType = {
   },
 }
 
+
 describe('mockios test', () => {
   it('get method should return hello world', async () => {
     const { data } = await mockios(mockData).get('/hello')

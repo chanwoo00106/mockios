@@ -1,11 +1,11 @@
-import { AxiosRequestConfig } from 'axios'
+import {RawAxiosRequestConfig} from "axios"
 
 type ResponseUrlBodyType = {
   [url: string]: [
     {
       [key: string]: any
     },
-    AxiosRequestConfig
+    RawAxiosRequestConfig
   ]
 }
 
