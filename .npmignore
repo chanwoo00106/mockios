@@ -5,6 +5,6 @@ example/**
 babel.config.json
 jest.config.js
 prettier.config.js
-rollup.config
+rollup.config.js
 tsconfig.json
 yarn.lock
