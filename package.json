@@ -2,7 +2,7 @@
   "name": "mockios",
   "main": "./src/index.ts",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A library that helps run-time testing by putting fake data instead of Axios.",
   "repository": {
     "type": "git",
