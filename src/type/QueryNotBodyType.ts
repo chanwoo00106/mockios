@@ -1,8 +1,8 @@
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 
-type QueryNotBodyType = <T = any, D = any>(
+type QueryNotBodyType = <T = any, R = AxiosResponse<T>, D = any>(
   url: string,
   config?: AxiosRequestConfig<D>
-) => Promise<AxiosResponse<T>>;
+) => Promise<R>;
 
 export default QueryNotBodyType;

@@ -1,9 +1,9 @@
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosResponse } from "axios";
 
-type QueryType = <T = any, D = any>(
+type QueryType = <T = any, R = AxiosResponse<T>, D = any>(
   url: string,
   data?: D,
   config?: AxiosRequestConfig<D>
-) => Promise<AxiosResponse<T>>
+) => Promise<R>;
 
-export default QueryType
+export default QueryType;
