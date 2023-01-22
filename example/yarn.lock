@@ -417,6 +417,15 @@ axios@^1.2.1:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
+axios@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.3.tgz#31a3d824c0ebf754a004b585e5f04a5f87e6c4ff"
+  integrity sha512-pdDkMYJeuXLZ6Xj/Q5J3Phpe+jbGdsSzlQaFVkMQzRUL05+6+tetX8TV3p4HrU4kzuO9bt+io/yGQxuyxA/xcw==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 browserslist@^4.21.3:
   version "4.21.4"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.4.tgz#e7496bbc67b9e39dd0f98565feccdcb0d4ff6987"
@@ -626,12 +635,12 @@ mime-types@^2.1.12:
   dependencies:
     mime-db "1.52.0"
 
-mockios@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/mockios/-/mockios-1.1.2.tgz#28767f8f68e06809ed111737cbc3c92085e3e741"
-  integrity sha512-rGK5TPdKIW9SYuUvGoT0fWZa/ep3JimxahDtxihrIos2z5v+LhxHlj7sga0+gamSf26mYycEn4AucdlJ7KKFyQ==
+mockios@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/mockios/-/mockios-1.2.3.tgz#0ad40d810fd060fbaf5f08b0dc77b7fe5bd7376f"
+  integrity sha512-wpOqwRyfGctMyZV/a7kDXPMBeHmYp2ZNQPU6bDRPyIyjdXG6+lcD+qNpD9k8jriC9K2mt64243BysvN7ju0umQ==
   dependencies:
-    axios "^1.2.1"
+    axios "^1.2.3"
 
 ms@2.1.2:
   version "2.1.2"
