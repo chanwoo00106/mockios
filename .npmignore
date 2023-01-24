@@ -2,6 +2,7 @@ src/**
 test/**
 example/**
 .gitignore
+.prettierrc
 babel.config.json
 jest.config.js
 prettier.config.js
