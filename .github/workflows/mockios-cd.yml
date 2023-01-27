@@ -2,7 +2,7 @@ name: mockios CD
 
 on:
   workflow_run:
-    workflows: ["Mockios CI"]
+    workflows: ["mockios-ci"]
     branches: [main]
     types: 
       - completed
