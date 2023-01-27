@@ -7,8 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  CI:
     runs-on: ubuntu-latest
 
     strategy:
