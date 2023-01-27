@@ -3,6 +3,7 @@ name: Mockios CI
 on:
   pull_request:
     types: [opened, reopened]
+  workflow_call:
 
 jobs:
   CI:
