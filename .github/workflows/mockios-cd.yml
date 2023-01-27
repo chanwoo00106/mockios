@@ -1,16 +1,18 @@
 name: mockios CD
 
 on:
-  workflow_run:
-    workflows: ["mockios-ci"]
-    branches: [main]
-    types: 
-      - completed
-    
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build:
+  CI:
+    uses: ./.github/workflows/mockios-ci.yml
+    secrets: inherit
 
+  CD:
+    needs: CI
     runs-on: ubuntu-latest
 
     strategy:
