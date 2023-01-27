@@ -8,7 +8,7 @@ on:
 
 jobs:
   CI:
-    uses: ./.github/workflows/mockios-ci.yml
+    uses: "./.github/workflows/mockios-ci.yml"
     secrets: inherit
 
   CD:
