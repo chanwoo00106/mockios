@@ -1,10 +1,8 @@
 name: Mockios CI
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    types: [opened, reopened]
 
 jobs:
   CI:
